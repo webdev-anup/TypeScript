@@ -41,3 +41,38 @@ userInfo = ["Alice", 30, true]
 const location: readonly [number, number] = [51.50, 0.12]
 
 const chaiItems: [name: string, price: number] = ["Masala", 25]
+
+
+//  enum
+enum CupSize {
+    SMALL,
+    MEDIUM,
+    LARGE
+}
+
+const size = CupSize.LARGE
+
+enum Status {
+    PENDING = 100,
+    SERVED,  // 101
+    CANCELLED // 102
+}
+
+enum ChaiType {
+    MASALA = "Masala",
+    GINGER = "Ginger",
+    GREEN = "Green",
+    WHITE = "White"
+}
+
+function makeChai(type: ChaiType) {
+    console.log(`Making ${type} chai`)
+}
+
+makeChai(ChaiType.MASALA)
+
+// heterogenuos value
+enum RandomEnum {
+    ID = 1,
+    NAME = "chai"
+}
