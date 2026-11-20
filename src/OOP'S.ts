@@ -18,3 +18,38 @@
 // masalaChai.flavour = "masala"
 
 
+// access modifier
+
+class Chai {
+    public flavour: string = "Ginger"
+
+    private secretIngredients = "Spices"
+
+    reveal(){
+        return this.secretIngredients //ok
+
+
+    }
+
+}
+class Shop {
+    protected shopName = "Chai corner"
+
+}
+class Branch extends Shop {
+    getName(){
+        return this.shopName;
+    }
+}
+
+class Walet {
+    #balance = 100
+
+    getBalance() {
+        return this.#balance
+    }
+}
+
+const w = new Walet()
+console.log(w.getBalance())
+
